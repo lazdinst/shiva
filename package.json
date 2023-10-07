@@ -2,7 +2,9 @@
   "name": "@nx-sc-matrix/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "node dist/apps/backend/main.js"
+  },
   "private": true,
   "dependencies": {
     "@swc/helpers": "~0.5.2",

@@ -14,6 +14,11 @@ app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to backend!' });
 });
 
+app.use(express.static(path.join(__dirname, '../../apps/client')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../apps/client'))
+})
+
 const port = process.env.PORT || 3333;
 const server = app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}/api`);
